@@ -191,32 +191,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>📘 TRỢ LÝ SOẠN GIÁO ÁN TỰ ĐỘNG (NLS)</h1>
-    <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Bản Ngò - ĐT: 097 1986 343</p>
-</div>
-""", unsafe_allow_html=True)
-
-if "GEMINI_API_KEY" in st.secrets:
-    api_key = st.secrets["GEMINI_API_KEY"]
-else:
-    with st.sidebar:
-        st.header("🔐 Cấu hình")
-        api_key = st.text_input("Nhập API Key:", type="password")
-
-if api_key:
-    genai.configure(api_key=api_key)
-
-# --- BỐ TRÍ DỌC (VERTICAL LAYOUT) ---
-
-# 1. TÀI LIỆU
-st.markdown('<div class="section-header">📂 1. TÀI LIỆU NGUỒN</div>', unsafe_allow_html=True)
-
-has_framework = False
-if os.path.exists(FILE_KHUNG_NANG_LUC):
-    st.success(f"✅ Đã tự động tích hợp: {FILE_KHUNG_NANG_LUC}")
-    has_framework = True
-else:
-    st.info(f"ℹ️ Chưa có file '{FILE_KHUNG_NANG_LUC}'. Thầy có thể upload để dùng tính năng Năng lực số.")
-
+      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 03591184780359118478</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 0359118478</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 035911847</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 03591184</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 0359118</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu học Quảng NguyênNguyên - ĐT: 035911</p>  """      <p>Tác giả: Tải Thị Thắng - Trường PTDTBT Tiểu h       g NguyênNguyên - ĐT: 03591</p>  """      <p>Tác g
 uploaded_files = st.file_uploader(
     "Tải Ảnh/PDF bài dạy (Kéo thả vào đây):", 
     type=["jpg", "png", "pdf"], accept_multiple_files=True
